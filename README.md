@@ -3,37 +3,42 @@ A secure Java-based password manager with AES encryption and master password aut
 
 ## Description
 
-This project is a secure password manager developed in Java. It allows users to store, retrieve, update, and manage passwords for different websites using a command-line interface.
+This project is a secure password manager developed in Java using a command-line interface (CLI). It allows users to store, retrieve, update, and manage passwords for different websites using a command-line interface.
 
-The system includes master password authentication and uses encryption to ensure that passwords are not stored in plain text.
+The system includes master password authentication and uses AES encryption to ensure that passwords are not stored in plain text. Each password entry also stores the date it was added or last updated.
 
 ## Problem Statement
 
-Managing multiple passwords securely is a common challenge. Many users store passwords in plain text or reuse them across platforms, which is unsafe. This project provides a simple and secure solution using core Java concepts.
+Managing multiple passwords securely is a common challenge. Many users store passwords in plain text or reuse them across platforms, which is unsafe. This project provides a simple and secure solution using core Java concepts such as file handling, encryption, and structured programming.
 
 ## Features
 
 ### Security
 
-* Master password authentication
+* Master password authentication (3 attempts limit)
 * Passwords stored in encrypted format (AES using Java Cryptography API)
-* Prevents duplicate entries
+* Prevents duplicate website entries
 
 ### Password Management
 
 *  Add new passwords
 *  Retrieve stored passwords
 *  Update existing passwords
-*  File-based storage (no database required) 
 *  View all saved websites
 *  Search websites using keywords
 *  Count total saved accounts
+*  Delete stored passwords
 *  Generate strong random passwords
+*  file-based storage
 
 ### Smart Validation
 
 * Password strength detection (Weak / Medium / Strong)
 * Weak passwords are rejected and must be re-entered
+
+### Data Tracking
+
+* Stores date of password creation/update (YYYY-MM-DD format)
 
 ##  Technologies Used
 
@@ -41,6 +46,7 @@ Managing multiple passwords securely is a common challenge. Many users store pas
 * File Handling (BufferedReader, FileWriter)
 * Exception Handling
 * Java Cryptography API (AES)
+* Date Handling (LocalDate)
 
 ## Relevance to Course Concepts
 
@@ -76,7 +82,7 @@ PasswordManager/
 
 ### Subsequent Runs:
 
-* Enter the master password to access the system
+* Enter the master password to access the system (maximum 3 attempts)
 
 ### Menu Options:
 
@@ -87,7 +93,8 @@ PasswordManager/
 5. Search Site
 6. Generate Password
 7. Count Passwords
-8. Exit
+8. Delete Password
+9. Exit
 
 ## Important Notes
 
@@ -100,6 +107,11 @@ PasswordManager/
 * No graphical user interface
 * Encryption key is fixed in code
 * No password recovery mechanism
+
+## Conclusion
+
+This project demonstrates a practical implementation of a secure password manager using core Java concepts. It combines encryption, file handling, and user interaction to provide a functional and secure system for managing credentials.
+
 
 
 * Name: Pranav Shyam Nair
