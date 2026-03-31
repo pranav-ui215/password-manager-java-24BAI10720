@@ -11,7 +11,7 @@ public class Main {
     static final String MASTER = System.getProperty("user.dir") + "/data/master.txt";
     static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    // 🔐 AUTH
+    // AUTH
     static boolean authenticate() {
         Scanner sc = new Scanner(System.in);
         File file = new File(MASTER);
@@ -54,7 +54,7 @@ public class Main {
         }
     }
 
-    // 🔒 STRENGTH
+    // STRENGTH
     static String checkStrength(String p) {
         if (p.length() < 6) return "Weak";
 
@@ -71,7 +71,7 @@ public class Main {
         return "Medium";
     }
 
-    // ➕ ADD
+    // ADD
     static void addPassword(String site, String pass) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE));
@@ -102,7 +102,7 @@ public class Main {
         }
     }
 
-    // 🔍 GET
+    // GET
     static void getPassword(String site) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE));
@@ -129,7 +129,7 @@ public class Main {
         }
     }
 
-    // 🔄 UPDATE
+    // UPDATE
     static void updatePassword(String site, String pass) {
         try {
             File in = new File(FILE);
@@ -169,7 +169,7 @@ public class Main {
         }
     }
 
-    // ❌ DELETE
+    // DELETE
     static void deletePassword(String site) {
         try {
             File in = new File(FILE);
@@ -204,7 +204,7 @@ public class Main {
         }
     }
 
-    // 📄 VIEW
+    // VIEW
     static void viewAllSites() {
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE));
@@ -222,7 +222,7 @@ public class Main {
         }
     }
 
-    // 🔎 SEARCH
+    // SEARCH
     static void searchSite(String key) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE));
@@ -243,7 +243,7 @@ public class Main {
         }
     }
 
-    // 🔢 COUNT
+    // COUNT
     static void countPasswords() {
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE));
@@ -259,7 +259,7 @@ public class Main {
         }
     }
 
-    // 🔑 GENERATE
+    // GENERATE
     static String generatePassword() {
         String chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%";
         Random r=new Random();
@@ -271,7 +271,7 @@ public class Main {
         return sb.toString();
     }
 
-    // 🚀 MAIN
+    // MAIN
     public static void main(String[] args) {
 
         // create folders/files automatically
